@@ -9,22 +9,22 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class AboutMenager : IAboutService
+    public class AboutManager : IAboutService
     {
         IAboutDal _aboutDal;
 
 
-        public AboutMenager(IAboutDal aboutDal)
+        public AboutManager(IAboutDal aboutDal)
         {
             _aboutDal = aboutDal;
         }
 
-        public About GetByID(int id)
+        public About TGetByID(int id)
         {
             return _aboutDal.GetByID(id);
         }
 
-        public List<About> GetList()
+        public List<About> TGetList()
         {
           return  _aboutDal.GetList();
         }
