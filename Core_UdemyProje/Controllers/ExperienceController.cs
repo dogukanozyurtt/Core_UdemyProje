@@ -17,21 +17,22 @@ namespace Core_UdemyProje.Controllers
             return View(values);
         }
 
-        [HttpGet] 
-        public IActionResult AddExperience() 
-        { 
+        [HttpGet]
+        public IActionResult AddExperience()
+        {
             return View();
         }
 
         [HttpPost]
-        public IActionResult AddExperience(Experience experience)
+        public IActionResult AddExperience(Experience experience) 
         {
-            
+            ViewBag.v1 = "Deneyim Ekleme";
+            ViewBag.v2 = "Deneyimler";
+            ViewBag.v3 = "Deneyim Ekleme";
             experienceManager.TAdd(experience);
-          
             return RedirectToAction("Index");
+            
         }
-
 
         public IActionResult DeleteExperience(int id)
         {
@@ -43,9 +44,9 @@ namespace Core_UdemyProje.Controllers
         [HttpGet]
         public IActionResult EditExperience(int id)
         {
-            ViewBag.v1 = "Deneyim Listesi";
-            ViewBag.v2 = "Deneyimler";
-            ViewBag.v3 = "Deneyim Listesi";
+            ViewBag.v1 = "Güncelleme";
+            ViewBag.v2 = "Deneyeimler";
+            ViewBag.v3 = "Deneyeim Güncelleme";
             var values = experienceManager.TGetByID(id);
             return View(values);
         }
@@ -56,5 +57,7 @@ namespace Core_UdemyProje.Controllers
             experienceManager.TUpdate(experience);
             return RedirectToAction("Index");
         }
+
+
     }
 }
