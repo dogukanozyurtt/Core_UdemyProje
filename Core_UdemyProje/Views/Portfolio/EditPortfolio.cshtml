@@ -1,21 +1,21 @@
 ﻿@model EntityLayer.Concrete.Portfolio
 @{
-    ViewData["Title"] = "AddPortfolio";
+    ViewData["Title"] = "EditPortfolio";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 
-
 <div class="card-header border-0">
-    <h3 class="mb-0">Proje Ekleme Sayfası</h3>
+    <h3 class="mb-0">Proje Düzenleme Sayfası</h3>
 </div>
-@using (Html.BeginForm("AddPortfolio", "Portfolio", FormMethod.Post))
-{
 
+@using (Html.BeginForm("EditPortfolio", "Portfolio", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.PortfolioID)
     <br />
     @Html.Label("Proje Başlığı")
     @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x=>x.Name)
+    @Html.ValidationMessageFor(x => x.Name)
 
 
     <br />
@@ -37,11 +37,11 @@
     <label>Image 2</label>
     @Html.TextBoxFor(x => x.Image2, new { @class = "form-control" })
     <br />
-    
+
     <label>Image 3</label>
     @Html.TextBoxFor(x => x.Image3, new { @class = "form-control" })
     <br />
-      
+
     <label>Platform</label>
     @Html.TextBoxFor(x => x.Platform, new { @class = "form-control" })
     <br />
@@ -49,22 +49,24 @@
     <label>Ücret</label>
     @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
     <br />
-    
+
     <label>Oran</label>
     @Html.TextBoxFor(x => x.Value, new { @class = "form-control" })
     <br />
-      
+
     <label>Durum</label>
     @Html.TextBoxFor(x => x.Status, new { @class = "form-control" })
     <br />
-    
+
     <label>Proje Url</label>
     @Html.TextBoxFor(x => x.ProjectUrl, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.ProjectUrl)
     <br />
 
-   
+
     <button class="btn btn-info">Kaydet</button>
 
 }
+
+
 
