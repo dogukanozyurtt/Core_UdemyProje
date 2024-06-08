@@ -6,6 +6,9 @@ namespace Core_UdemyProje.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.v1 = "Dashboard"; 
+            ViewBag.v1 = "İstatislikler"; 
+            ViewBag.v1 = "İstatistik Sayfası";
             return View();
         }
     }
