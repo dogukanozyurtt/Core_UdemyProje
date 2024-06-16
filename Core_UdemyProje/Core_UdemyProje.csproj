@@ -119,9 +119,4 @@
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Areas\Writer\Data\" />
-    <Folder Include="Areas\Writer\Models\" />
-  </ItemGroup>
-
 </Project>

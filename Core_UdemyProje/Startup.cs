@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Core_Proje
+namespace Core_UdemyProje
 {
     public class Startup
     {
@@ -52,6 +52,9 @@ namespace Core_Proje
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+         
+
         }
     }
 }

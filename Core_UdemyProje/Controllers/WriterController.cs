@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Core_UdemyProje.Areas.Writer.Controllers
+namespace Core_UdemyProje.Controllers
 {
-    [Area("Writer")]
-    public class DefaultController : Controller
+    public class WriterController : Controller
     {
         public IActionResult Index()
         {
